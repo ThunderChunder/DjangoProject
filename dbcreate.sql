@@ -21,7 +21,6 @@ CREATE TABLE Permitted_Patient_Hash(
 	CONSTRAINT patient_hash_pk PRIMARY KEY (hash),
 	CONSTRAINT patient_hash_fk1 FOREIGN KEY(id) REFERENCES Uncompleted_Survey(id));
 
-GRANT FILE ON *.* TO 'root'@'%';
 GRANT ALL ON formserver.* TO 'server'@'%' IDENTIFIED BY 'formserver';
 GRANT FILE ON *.* TO 'server'@'%';
 
